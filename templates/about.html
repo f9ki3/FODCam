@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    {% include 'header_links.html' %}
+</head>
+<body class="text-red light-mode">
+    {% include 'nav.html' %}
+    <div class="container pt-5">
+        <div class="d-flex flex-row justify-content-between">
+            <h1 class="fw-bolder">Abouts</h1>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round">
+                    <i style=" margin-left: 15px" class="bi fs-5 bi-sun-fill icon-light"></i> <!-- Sun icon for light mode -->
+                    <i style=" margin-left: -10px" class="bi fs-6 bi-moon-stars-fill icon-dark"></i> <!-- Moon icon for dark mode -->
+                </span>
+            </label>
+        </div>
+        <div class="row mt-5" id="about1">
+            <div class="col-12 col-md-6">
+                <div class="image-container">
+                    <div id="div1" class="image-box">
+                        <img src="static/img/fodcam_product1.png" alt="Fodcam Product 1">
+                    </div>
+                    <div id="div2" class="image-box">
+                        <img src="static/img/fodcam_product2.png" alt="Fodcam Product 1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h4 class="mb-5">About the FODCam</h4>
+                <p>FODCam, or Foreign Object Detection Camera, is an innovative surveillance solution designed to enhance security by detecting and identifying objects in real time.</p>
+                <p>This advanced system operates similarly to traditional CCTV cameras but with a significant upgrade: it utilizes cutting-edge hardware to capture image feeds, which are then transmitted to a Flask server for processing.</p>
+                <p>By leveraging powerful libraries like OpenCV and the YOLO (You Only Look Once) model, FODCam efficiently analyzes the incoming images to detect foreign objects within its field of view.</p>
+                <p>This capability not only improves situational awareness but also aids in proactive security measures, making FODCam an invaluable tool for both commercial and residential surveillance applications.</p>
+                <p>With its seamless integration of hardware and software, FODCam is poised to redefine how we monitor our surroundings.</p>
+                <div>
+                    <button onclick="about2()" class="btn mt-5 bg-red">Next</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-5" id="about2" style="display: none;">
+            <div class="col-12 col-md-6">
+                <div class="image-container">
+                    <div class="image-box">
+                        <img class="rounded-4" src="static/img/school.jpg" alt="School Image">
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <h4 class="mb-5">Developers</h4>
+                <p>
+                    Mateo, Jonathan Emmannuel.
+                    Sapiter, Ann Louise Margueritt.
+                    Asuncion, Ashley Nicole.
+                    Santos, Mary Franceska.
+                    Rivera, Ervin Jay.
+                </p>
+                
+                <h4 class="mb-5 mt-5">Schools</h4>
+                <p>
+                    The Philippine College of Aeronautics (PCA), also known as PhilSCA, located in Villamor, Pasay City, is a premier institution dedicated to providing high-quality education and training in the field of aviation and aeronautics. With a strong emphasis on practical experience and industry partnerships, PCA prepares its students for successful careers in various aviation sectors, including pilot training, aircraft maintenance, and aviation management.
+                </p>
+                
+                <div>
+                    <button onclick="about1()" class="btn mt-5 bg-red">Previous</button>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    {% include 'footer_links.html' %}
+</body>
+</html>

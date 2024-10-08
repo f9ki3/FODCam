@@ -1,0 +1,218 @@
+.text-red{
+    color: #505050;
+}
+
+.bg-red{
+    background-color: #A30504;
+    color: white;
+}
+
+.bg-red:hover{
+    background-color: #660000;
+    color: white;
+}
+
+.text-muted-red{
+    color:  #919191;
+}
+
+#fullscreen-btn {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    background-color: #000000;
+    opacity: 50%;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    z-index: 10;
+}
+
+.image-container {
+    width: auto; /* Retain size of the div */
+    height: 300px; /* Retain size of the div */
+    position: relative; /* Positioning context for absolute positioning of images */
+}
+.image-box {
+    position: absolute; /* Allow overlap of images */
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#connecting {
+    z-index: -10; /* Ensure connecting div stays on top */
+    color: #acacac;
+}
+
+.dark-mode{
+    background-color: rgb(29, 28, 28);
+}
+
+/* For WebKit browsers (Chrome, Safari) */
+.custom-scrollbar {
+    overflow-y: hidden; /* Initially hide the scrollbar */
+    height: 200px; /* Set a fixed height for the scrollable area */
+    transition: overflow-y 0.3s; /* Optional: smooth transition for scrollbar appearance */
+}
+
+/* Show scrollbar on hover */
+.custom-scrollbar:hover {
+    overflow-y: auto; /* Show scrollbar when hovering */
+}
+
+/* Width of the scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 12px; /* Adjust width as needed */
+    cursor: pointer;
+}
+
+/* Track (background of the scrollbar) */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: rgb(29, 28, 28); /* Black track */
+}
+
+/* Handle (the draggable part of the scrollbar) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(29, 28, 28); /* Black thumb */
+    border-radius: 6px; /* Make thumb rounded */
+}
+
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(40, 40, 40); /* Darker shade on hover for better visibility */
+}
+
+/* For Firefox */
+.custom-scrollbar {
+    scrollbar-width: thin; /* Use 'thin' for a smaller scrollbar */
+    scrollbar-color: rgb(48, 44, 44) rgb(14, 13, 13); /* Thumb color and track color */
+}
+
+/* Show scrollbar on hover for Firefox */
+.custom-scrollbar:hover {
+    scrollbar-color: rgb(29, 28, 28) rgb(20, 20, 20); /* Same color as in WebKit */
+}
+
+:root {
+    --bg-color-light: #ffffff;
+    --text-color-light: #505050;
+    --bg-color-dark: #1a1a1a;
+    --text-color-dark: #ffffff;
+}
+
+.border-red-15{
+    border: 10px solid #A30504;
+}
+
+/* Dark mode border */
+.dark-mode .border-red-15 {
+    border-color: #ffffff; /* Dark mode border color */
+}
+
+/* Optional: Light mode border if you want to reset on toggle */
+.light-mode .border-red-15 {
+    border-color: #505050; /* Light mode border color */
+}
+
+body.light-mode {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+body.dark-mode {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px; /* Circular edges */
+}
+
+.slider.round {
+    border-radius: 34px; /* Circular edges */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%; /* Circle */
+}
+
+input:checked + .slider {
+    background-color: #A30504; /* Color when checked */
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px); /* Move the circle to the right */
+}
+
+/* Centering the icons */
+.slider .bi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem; /* Adjust size as needed */
+    transition: opacity 0.4s;
+}
+
+/* Show moon icon by default (when toggle is not checked) */
+.icon-dark {
+    opacity: 1; /* Show moon icon */
+}
+
+.icon-light {
+    opacity: 0; /* Hide sun icon */
+}
+
+/* Show sun icon in light mode when checked */
+input:checked + .slider .icon-light {
+    opacity: 1; /* Show sun icon */
+}
+
+/* Hide moon icon in dark mode when checked */
+input:checked + .slider .icon-dark {
+    opacity: 0; /* Hide moon icon */
+}

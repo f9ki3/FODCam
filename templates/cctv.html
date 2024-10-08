@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FODCam - CCTV</title>
+    {% include 'header_links.html' %}
+</head>
+<body class="text-red light-mode">
+    {% include 'nav.html' %}
+    <div class="container pt-5">
+        <div class="d-flex flex-row justify-content-between">
+            <h1 class="fw-bolder" id="datetime-display"></h1>
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round">
+                    <i style=" margin-left: 15px" class="bi fs-5 bi-sun-fill icon-light"></i> <!-- Sun icon for light mode -->
+                    <i style=" margin-left: -10px" class="bi fs-6 bi-moon-stars-fill icon-dark"></i> <!-- Moon icon for dark mode -->
+                </span>
+            </label>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-8">
+                <div style="width: 100%; height: 70vh; overflow:hidden" class="border-red-15 d-flex flex-row justify-content-center align-items-center rounded-5 position-relative">
+                    <img style="object-fit: cover; width: 100%; height: 100%;"  id="video-feed">
+                
+                    <div id="connecting" class="text-muted-red position-absolute d-flex flex-column justify-content-center align-items-center" style="top: 0; left: 0; width: 100%; height: 100%;">
+                        <i class="bi bi-wifi" style="font-size: 10rem;"></i>
+                        <p>Connecting please wait</p>
+                    </div>
+                
+                    <button id="fullscreen-btn" class="fullscreen-btn position-absolute"><i class="bi bi-arrows-fullscreen"></i></button>
+                </div>
+                
+            </div>
+            <div class="col-12 col-md-4">
+                <h4 class=" ms-3 fw-bolder">Object Detection Logs</h4>
+                <div class="rounded-5 pt-0 p-3 custom-scrollbar" style="height: 70vh; font-size: 12px">
+                    <hr>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 60%">Date</th>
+                                <th style="width: 40%">Detected Objects</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logBody">
+                            <!-- Log data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer_links.html' %}
+</body>
+</html>
