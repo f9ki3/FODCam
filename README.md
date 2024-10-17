@@ -18,7 +18,7 @@ With its seamless integration of hardware and software, FODCam is poised to rede
 - Asuncion, Ashley Nicole
 - Santos, Mary Franceska
 - Rivera, Ervin Jay
-- Fyke Lleva
+
 
 ### Schools
 The Philippine College of Aeronautics (PCA), also known as PhilSCA, located in Villamor, Pasay City, is a premier institution dedicated to providing high-quality education and training in the field of aviation and aeronautics. With a strong emphasis on practical experience and industry partnerships, PCA prepares its students for successful careers in various aviation sectors, including pilot training, aircraft maintenance, and aviation management.
