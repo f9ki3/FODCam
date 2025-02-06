@@ -18,6 +18,7 @@ With its seamless integration of hardware and software, FODCam is poised to rede
 - Asuncion, Ashley Nicole
 - Santos, Mary Franceska
 - Rivera, Ervin Jay
+- Loterena, Fyke
 
 
 ### Schools
